@@ -1,0 +1,184 @@
+body{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+/* grid area*/
+.user-1{
+    grid-area:header;
+}
+.user-2{
+    grid-area:main;
+}
+.user-3{
+    grid-area:right;
+    
+}
+.user-4{
+    grid-area:menu;
+}
+.user-5{
+    grid-area:footer;
+
+}
+
+
+
+.grid-container{  
+    display:grid;
+    grid-template:
+    'header header header header main right'
+    'menu footer footer footer footer right'
+    'menu footer footer footer footer right';
+    max-height:100%;
+    max-width:100%;
+    grid-gap:20px;
+    
+    
+}
+.grid-container > div{
+    border-radius:15px;
+}
+/*users*/
+.container{
+    position:relative;
+    margin-left:30px;
+    margin-right:30px;
+}
+h3{
+    font-family:'Barlow Semi Condensed', sans-serif;
+    color:hsl(0, 0%, 81%);
+    font-size:13px; 
+}
+h4{
+    font-family:'Barlow Semi Condensed', sans-serif;
+    color:hsl(0, 0%, 81%);
+    opacity:70%;
+}
+.grad{
+    opacity:50%;
+}
+.main-txt{
+    font-size:26px;
+}
+
+.user-1{
+    background-color:hsl(263, 55%, 52%);
+    max-width:100%;
+    max-height:100%;
+    
+}
+.quotation-img{
+    left:450px;
+    top:0;
+    left:50;
+    opacity:100%;
+    position:absolute;
+    z-index:0;
+}
+.first-sec-main-txt{
+   margin-top:-1px;
+   position:relative;
+}
+
+.profile-img{
+    border-radius:50%;
+    border:1px solid purple;
+    max-width:100%;
+}
+.upper-content{
+    display:flex;
+    margin-top:10px;
+}
+
+.info{
+    margin-left:15px;
+}
+
+.user-2{
+    background-color:hsl(217, 19%, 35%);
+}
+.main-txt{
+    color:hsl(0, 0%, 100%);
+}
+.user-3{
+background-color:hsl(0, 0%, 100%);
+ height:100%;
+ box-shadow:5px 5px hsl(217, 19%, 35%);
+}
+.user-3 h3{
+    color:hsl(217, 19%, 35%);
+}
+.user-3 h4{
+    color:hsl(217, 19%, 35%);
+}
+
+.user-4{
+    box-shadow:5px 5px hsl(217, 19%, 35%);
+    background-color:hsl(0, 0%, 100%);
+}
+.user-4 h3{
+    color:hsl(217, 19%, 35%);
+}
+.user-4 h4{
+    color:hsl(217, 19%, 35%);
+}
+.user-5{
+    background-color: hsl(219, 29%, 14%);
+    
+}
+
+/*mobile phone design*/
+@media only screen and (max-width:375px) {
+    body{
+        margin:0;
+        padding:0;
+        overflow:scroll;
+        width:100%;
+        
+    }
+    .grid-container{
+        background-color:transparent;
+      gap:10px;
+      display:flex;
+      flex-direction:column;
+      max-width:100%;
+      max-height:100%;
+      
+    }
+    .grid-container > div{
+        
+        max-width:100%;
+    }
+    .user-1 h3{
+        font-size:13px;
+        margin-top:10px;
+    }
+    .container{
+        position:relative;
+    }
+    .quotation-img{
+        opacity:100%;
+        z-index:1;
+        position:absolute;
+        top:0;
+        bottom:0;
+        max-width:48px;
+        right:0;
+        left:175px;
+    }
+    .first-sec-main-txt{
+        margin-top:-1px;
+        position:relative;
+     }
+     .user-3{
+        box-shadow:none;
+     }
+     .user-4{
+        box-shadow:none;
+     }
+}
+    
